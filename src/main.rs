@@ -1,3 +1,4 @@
+use std::env;
 use std::fs::File;
 use std::io::{BufRead, BufReader, Lines};
 
@@ -11,7 +12,12 @@ mod day4;
 mod day5;
 
 fn main() {
-    day_selector(5);
+    let args: Vec<String> = env::args().collect();
+    let mut day = 1;
+    if args.len() > 1 {
+        day = args[1].parse().unwrap();
+    }
+    day_selector(day);
 }
 
 /// Selector to choose which day to execute
