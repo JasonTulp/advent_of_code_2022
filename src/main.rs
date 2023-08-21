@@ -10,6 +10,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -28,6 +29,7 @@ fn day_selector(day: u8) {
         3 => day3::rucksack_organisation(),
         4 => day4::camp_cleanup(),
         5 => day5::supply_stacks(),
+        6 => day6::find_packet_marker(),
         _ => ()
     }
 }
